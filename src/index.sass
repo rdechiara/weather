@@ -1,0 +1,49 @@
+@use 'sass:math'
+$num-of-cells: 24
+*
+  box-sizing: border-box
+html, body
+  width: 100vw
+  height: 100vh
+  margin: 0
+  padding: 0
+
+  @mixin grid($cells)
+    display: grid
+    grid-template-columns: repeat($cells, 1fr)
+    grid-template-rows: repeat($cells, 1fr)
+  .container
+    @include grid($cells: $num-of-cells)
+    width: 100vw
+    height: 100vh
+    border: red solid 1px
+  .center
+    grid-column-start: 1
+    grid-column-end: $num-of-cells
+    display: flex
+    justify-content: center
+  .temp-oggi
+    grid-column-start: 2
+    grid-column-end:  math.floor( math.div($num-of-cells, 2))
+    grid-row: 2 / 5
+
+  .desc-oggi
+    grid-column-start: math.ceil( math.div($num-of-cells + 1, 2)) + 1
+    grid-column-end:  $num-of-cells
+    grid-row: 2 / 5
+  .date
+    grid-area: 6/2/9/10
+
+  .min-temp
+    /*grid-column-start: 11
+      grid-colum-end: 17
+      grid-row-start: 6*
+    grid-area: 6/11/9/17
+  .max-temp
+      grid-area: 6/18/9/22
+  .mattina
+    grid-area: 10/2/16/9
+  .pomeriggio
+    grid-area: 10/10/16/17
+  .sera
+    grid-area: 10/18/16/24

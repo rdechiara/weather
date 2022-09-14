@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+html .container, body .container {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(24, 1fr);
+  width: 100vw;
+  height: 100vh;
+  border: red solid 1px;
+}
+html .center, body .center {
+  grid-column-start: 1;
+  grid-column-end: 24;
+  display: flex;
+  justify-content: center;
+}
+html .temp-oggi, body .temp-oggi {
+  grid-column-start: 2;
+  grid-column-end: 12;
+  grid-row: 2/5;
+}
+html .desc-oggi, body .desc-oggi {
+  grid-column-start: 14;
+  grid-column-end: 24;
+  grid-row: 2/5;
+}
+html .date, body .date {
+  grid-area: 6/2/9/10;
+}
+html .min-temp, body .min-temp {
+  /*grid-column-start: 11
+  * grid-colum-end: 17
+  * grid-row-start: 6* */
+  grid-area: 6/11/9/17;
+}
+html .max-temp, body .max-temp {
+  grid-area: 6/18/9/22;
+}
+html .mattina, body .mattina {
+  grid-area: 10/2/16/9;
+}
+html .pomeriggio, body .pomeriggio {
+  grid-area: 10/10/16/17;
+}
+html .sera, body .sera {
+  grid-area: 10/18/16/24;
+}
+
+/*# sourceMappingURL=main.css.map */
