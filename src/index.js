@@ -12,7 +12,10 @@ async function weatherOf(cityName)
           `Minima: ${Math.round(parseFloat(info['main']['temp_min']))} °C`;
     document.getElementById('max-temp').textContent =
         `Massima: ${Math.round(parseFloat(info['main']['temp_max']))} °C`;
-   });
+    console.log(document.getElementById('icon'));
+    document.getElementById('icon').src = `http://openweathermap.org/img/wn/${info['weather']['0']['icon']}@2x.png`
+    document.getElementById('date').textContent = `${new Date().toLocaleDateString()}`
+  });
 }
 document.getElementById('city-btn').onclick = function promptCity()
 {
