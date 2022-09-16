@@ -1,11 +1,12 @@
 const weather = (() => {
+
   function extractWeatherData(data) {
     const {
       main: {temp, temp_min, temp_max},
-      weather: [{description}]
+      weather: [{description, icon}]
 
     } = data;
-    return {temp, temp_min, temp_max, description};
+    return {temp, temp_min, temp_max, description, icon};
   }
   /*
    */
