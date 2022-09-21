@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  background-color: #9d4bca;
-  color: white;
 }
 
 html, body {
@@ -57,4 +55,4 @@ html .err-msg-hidden, body .err-msg-hidden {
   display: none;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=index.css.map */
